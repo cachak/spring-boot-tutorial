@@ -5,6 +5,8 @@ include 'spring-boot-data:spring-boot-data-jpa-multiple'
 findProject(':spring-boot-data:spring-boot-data-jpa-multiple')?.name = 'spring-boot-data-jpa-multiple'
 
 include 'spring-boot-mvc'
+include 'spring-boot-mvc:spring-boot-mvc-controller'
+findProject(':spring-boot-mvc:spring-boot-mvc-controller')?.name = 'spring-boot-mvc-controller'
 
 
 
