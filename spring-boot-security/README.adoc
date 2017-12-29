@@ -1,0 +1,9 @@
+==== Sub Project : Spring Security
+Contoh contoh spring security, mulai dari penerapan login dengan http auth, username password dan juga role
+
+===== Reference
+- https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysql-a5d8545d837d[Spring Boot + Spring MVC + Spring Security + MySQL]
+- http://www.baeldung.com/spring-security-basic-authentication[Spring Security Basic Authentication]
+- http://www.baeldung.com/spring-security-acl[Introduction to Spring Security ACL]
+- https://docs.spring.io/spring-security/site/docs/4.2.3.RELEASE/guides/html5/helloworld-xml.html[Hello Spring Security Xml Config]
+

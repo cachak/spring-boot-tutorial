@@ -1,0 +1,15 @@
+subprojects {
+    group 'id.web.sahir.tutorial.springboot.security'
+    apply plugin: 'java'
+
+    /*Task that copies all the dependencies under build/libs */
+    task copyDependencies(type: Copy) {
+        from configurations.compile
+        into 'build/libs'
+    }
+
+    dependencies {
+        compile boot.starter, misc.slf4jJcl, misc.logback
+        testCompile boot.starterTest, testing.junit
+    }
+}
