@@ -58,3 +58,6 @@ gradlew
 gradlew.bat
 gradle
 gradlew*
+
+#application configuration
+application-*.yml

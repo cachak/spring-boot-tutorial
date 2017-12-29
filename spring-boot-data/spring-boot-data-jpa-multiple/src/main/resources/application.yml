@@ -1,0 +1,73 @@
+spring:
+  profiles:
+    active: development
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database: default
+
+application:
+  message: Training Spring Day One Model
+
+database:
+  default:
+    datasource:
+      url: jdbc:mysql://172.17.12.11:3306/training?useSSL=false
+      username: username
+      password: password
+      #driver-class-name: com.mysql.cj.jdbc.Driver
+      initialize: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      format_sql: true
+  transaction:
+    datasource:
+      url: jdbc:mysql://172.17.12.11:3306/training?useSSL=false
+      username: username
+      password: password
+      #driver-class-name: com.mysql.cj.jdbc.Driver
+      initialize: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      format_sql: true
+
+
+logging:
+  level:
+    .: info
+    com:
+      zaxxer:
+        hikari:
+          HikariConfig:
+            .: info
+    org:
+      springframework:
+        transaction:
+          interceptor: trace
+      hibernate:
+        SQL: info
+        type:
+          .: info
+          descriptor:
+            sql: trace
+    id:
+      myindo:
+        .: trace
+
+---
+
+spring:
+  profiles: production
+
+---
+
+spring:
+  profiles: staging
+
+---
+
+spring:
+  profiles: development
+
+

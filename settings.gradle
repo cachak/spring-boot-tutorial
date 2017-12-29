@@ -1,0 +1,17 @@
+rootProject.name = 'spring-boot-tutorial'
+
+include 'spring-boot-data'
+include 'spring-boot-data:spring-boot-data-jpa-multiple'
+findProject(':spring-boot-data:spring-boot-data-jpa-multiple')?.name = 'spring-boot-data-jpa-multiple'
+
+include 'spring-boot-mvc'
+
+
+
+//we check if the modules have gradle configuration files
+rootProject.children.each { project ->
+    project.buildFileName = "${project.name}.gradle"
+    assert project.projectDir.isDirectory()
+    assert project.buildFile.exists()
+    assert project.buildFile.isFile()
+}

@@ -1,0 +1,56 @@
+hikari.setDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlDataSource");
+            hikari.addDataSourceProperty("serverName", getConfig().getString("mysql.ip"));
+            hikari.addDataSourceProperty("port", getConfig().getString("mysql.port"));
+            hikari.addDataSourceProperty("databaseName", getConfig().getString("mysql.database"));
+            hikari.addDataSourceProperty("user", getConfig().getString("mysql.username"));
+            hikari.addDataSourceProperty("password", getConfig().getString("mysql.password"));
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/database
+spring.datasource.username=root
+spring.datasource.password=Password1
+spring.datasource.dataSourceClassName=com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+
+spring.jpa.hibernate.connection.provider_class=org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+spring.jpa.hibernate.hikari.minimumIdle=5
+spring.jpa.hibernate.hikari.maximumPoolSize=10
+spring.jpa.hibernate.hikari.idleTimeout=30000
+
+spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.EJB3NamingStrategy
+spring.jpa.properties.hibernate.show_sql=false
+spring.jpa.properties.hibernate.hbm2ddl.auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.cache.use_query_cache=true
+spring.jpa.properties.hibernate.cache.use_second_level_cache=true
+spring.jpa.properties.hibernate.cache.default_cache_concurrency_strategy=READ_WRITE
+spring.jpa.properties.hibernate.cache.region.factory_class=org.hibernate.cache.ehcache.EhCacheRegionFactory
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+
+# Reference
+- http://www.baeldung.com/spring-boot-custom-auto-configuration
+- https://stackoverflow.com/questions/28821521/configure-datasource-programmatically-in-spring-boot
+- http://www.baeldung.com/spring-data-jpa-multiple-databases
+- https://github.com/webjars/sample-jetty_war
+- https://www.webjars.org/documentation#springmvc
+- https://www.ccampo.me/java/spring/2016/02/13/multi-datasource-spring-boot.html
+- https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-one-configuration/
+- https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-two-crud/
+- http://www.springboottutorial.com/spring-boot-auto-configuration
+- https://github.com/snicoll-demos/demo-multi-entity-managers
+- https://www.ccampo.me/java/spring/2016/02/13/multi-datasource-spring-boot.html
+- https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7
+- https://github.com/jahe/spring-boot-multiple-datasources
+- http://roufid.com/spring-boot-multiple-databases-configuration/
+- https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
+- http://www.baeldung.com/spring-data-jpa-multiple-databases
+
+
+# Reference Transaction Management
+- http://www.codingpedia.org/jhadesdev/how-does-spring-transactional-really-work/
+- https://spring.io/guides/gs/managing-transactions/
+- https://dzone.com/articles/spring-transaction-management
+- https://www.ibm.com/developerworks/library/j-ts1/index.html
+- https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html
+- http://www.mkyong.com/spring/spring-aop-transaction-management-in-hibernate/
+- http://www.baeldung.com/transaction-configuration-with-jpa-and-spring
+- http://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transactional-annotation/
