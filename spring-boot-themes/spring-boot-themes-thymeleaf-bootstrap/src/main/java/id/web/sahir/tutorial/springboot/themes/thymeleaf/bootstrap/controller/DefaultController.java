@@ -12,7 +12,7 @@ public class DefaultController {
 
 
     @RequestMapping(value = {"/","/home"})
-    public String DefaultAction() {
-        return "default";
+    public String HomeAction() {
+        return "defaultHome";
     }
 }
