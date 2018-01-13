@@ -8,6 +8,15 @@ include 'spring-boot-mvc'
 include 'spring-boot-mvc:spring-boot-mvc-controller'
 findProject(':spring-boot-mvc:spring-boot-mvc-controller')?.name = 'spring-boot-mvc-controller'
 
+include 'spring-boot-security'
+include 'spring-boot-security:spring-boot-security-javaconfig'
+findProject(':spring-boot-security:spring-boot-security-javaconfig')?.name = 'spring-boot-security-javaconfig'
+include 'spring-boot-security:spring-boot-security-xmlconfig'
+findProject(':spring-boot-security:spring-boot-security-xmlconfig')?.name = 'spring-boot-security-xmlconfig'
+
+include 'spring-boot-themes'
+include 'spring-boot-themes:spring-boot-themes-thymeleaf-bootstrap'
+findProject(':spring-boot-themes:spring-boot-themes-thymeleaf-bootstrap')?.name = 'spring-boot-themes-thymeleaf-bootstrap'
 
 
 //we check if the modules have gradle configuration files

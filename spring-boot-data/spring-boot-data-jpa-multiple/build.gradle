@@ -22,8 +22,8 @@ dependencies {
 
 jar {
 	manifest {
-		attributes("Created-By": "Iuliana Cosmina",
-				"Specification-Title": "Pro Spring 5",
+		attributes("Created-By": "Sahir",
+				"Specification-Title": "Spring Boot Tutorial",
 				"Main-Class"         : "id.web.sahir.tutorial.springboot.data.jpa.multiple.SpringBootDataMultipleApplication",
 				"Class-Path": configurations.compile.collect { it.getName() }.join(' '))
 	}
