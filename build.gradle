@@ -8,6 +8,7 @@ ext {
 	springBatchVersion = '4.0.0.RELEASE'
 	springIntegrationVersion = '5.0.0.RELEASE'
 	springBatchIntegrationVersion = '4.0.0.RELEASE'
+	springSessionVersion = '2.0.0.RELEASE'
 
 	//logging libs
 	slf4jVersion = '1.7.25'
@@ -75,8 +76,10 @@ ext {
 			batchCore         : "org.springframework.batch:spring-batch-core:$springBatchVersion",
 			batchIntegration  : "org.springframework.batch:spring-batch-integration:$springBatchIntegrationVersion",
 			integrationFile   : "org.springframework.integration:spring-integration-file:$springIntegrationVersion",
-			webflux           : "org.springframework:spring-webflux:$springVersion"
-
+			webflux           : "org.springframework:spring-webflux:$springVersion",
+			sessionCore       : "org.springframework.session:spring-session-core:$springSessionVersion",
+			sessionRedis      : "org.springframework.session:spring-session-data-redis:$springSessionVersion",
+			propdeps          : "io.spring.gradle:propdeps-plugin:0.0.9.RELEASE"
 	]
 
 	hibernate = [
@@ -106,8 +109,9 @@ ext {
 			starterThyme    : "org.springframework.boot:spring-boot-starter-thymeleaf:$bootVersion",
 			starterSecurity : "org.springframework.boot:spring-boot-starter-security:$bootVersion",
 			starterBatch    : "org.springframework.boot:spring-boot-starter-batch:$bootVersion",
-			starterWebflux  : "org.springframework.boot:spring-boot-starter-webflux:$bootVersion"
-
+			starterWebflux  : "org.springframework.boot:spring-boot-starter-webflux:$bootVersion",
+			starterRedis    : "org.springframework.boot:spring-boot-starter-data-redis:$bootVersion",
+			devtools        : "org.springframework.boot:spring-boot-devtools:$bootVersion"
 	]
 
 	testing = [
