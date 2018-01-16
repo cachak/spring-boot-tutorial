@@ -1,0 +1,19 @@
+//apply plugin: 'org.springframework.boot'
+
+dependencies {
+	//compile boot.starterJpa, db.mysql
+	compile boot.starterWeb, boot.starterThyme
+	compile misc.groovy, misc.thymeleafLayoutDialect
+	compile boot.starterRedis, spring.sessionRedis
+	compile web.thymeSecurity
+
+}
+
+jar {
+	manifest {
+		attributes("Created-By": "Sahir",
+				"Specification-Title": "Spring Boot Tutorial",
+				"Main-Class"         : "id.web.sahir.tutorial.springboot.framework.SpringBootFrameworkSahirFrameworkApplication",
+				"Class-Path": configurations.compile.collect { it.getName() }.join(' '))
+	}
+}
