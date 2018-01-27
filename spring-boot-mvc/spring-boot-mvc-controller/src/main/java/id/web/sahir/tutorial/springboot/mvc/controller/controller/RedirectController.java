@@ -11,4 +11,5 @@ public class RedirectController {
     public String defaultAction() {
         return "redirectDefault";
     }
+
 }
