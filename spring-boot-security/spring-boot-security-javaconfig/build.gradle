@@ -17,7 +17,14 @@ buildscript {
 apply plugin: 'org.springframework.boot'
 
 dependencies {
-    compile boot.starterWeb
+    compile project(':framework:sahir-framework')
+    compile boot.starterWeb, boot.starterSecurity, boot.starterThyme
+    compile misc.groovy, misc.thymeleafLayoutDialect
+    compile boot.starterRedis, spring.sessionRedis
+    compile web.thymeSecurity
+
+    compile 'org.webjars:AdminLTE:2.4.2'
+
 }
 
 jar {

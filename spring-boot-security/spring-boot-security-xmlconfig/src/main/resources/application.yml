@@ -1,0 +1,6 @@
+server:
+  port: 33333
+security:
+  user:
+    name: user
+    password: password

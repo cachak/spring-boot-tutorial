@@ -1,0 +1,104 @@
+spring:
+  profiles:
+    active: development
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database: default
+  thymeleaf:
+    enabled: true
+    cache: false
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/unify/templates/
+    suffix: .html
+    servlet:
+      content-type: text/html
+    check-template: true
+  messagesx:
+    basename: messages/messages
+    encoding: UTF-8
+    #cache-duration: 1
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  session:
+    redis:
+      namespace: MyIndo:Session
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
+    password: myindo
+  mvc:
+    locale: in_ID
+application:
+  message: Training Spring Day One Model
+
+logging:
+  level:
+    .: info
+    com:
+      zaxxer:
+        hikari:
+          HikariConfig:
+            .: info
+    org:
+      springframework:
+        transaction:
+          interceptor: trace
+      hibernate:
+        SQL: info
+        type:
+          .: info
+          descriptor:
+            sql: trace
+    id:
+      web:
+        sahir:
+          .: trace
+server:
+  port: 33333
+  errorx:
+    path: /error
+    include-exception: true
+    include-stacktrace: always
+    whitelabel:
+      enabled: false
+  error:
+    whitelabel:
+      enabled: false
+
+myindo:
+  thymeleaf:
+    themes: adminlte
+    skin: default
+  i18n:
+    language: id-ID
+security:
+  user:
+    password: password
+    name: user
+    role: USER,ADMIN
+  basic:
+    enabled: false
+
+---
+
+spring:
+  profiles: production
+
+---
+
+spring:
+  profiles: staging
+
+---
+
+spring:
+  profiles: development
+
+
