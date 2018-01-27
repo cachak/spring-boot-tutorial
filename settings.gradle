@@ -18,6 +18,10 @@ include 'spring-boot-themes'
 include 'spring-boot-themes:spring-boot-themes-thymeleaf-bootstrap'
 findProject(':spring-boot-themes:spring-boot-themes-thymeleaf-bootstrap')?.name = 'spring-boot-themes-thymeleaf-bootstrap'
 
+include 'framework'
+include 'framework:sahir-framework'
+findProject(':framework:sahir-framework')?.name = 'sahir-framework'
+
 
 //we check if the modules have gradle configuration files
 rootProject.children.each { project ->
