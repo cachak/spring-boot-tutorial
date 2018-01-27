@@ -1,0 +1,6 @@
+= Reference
+
+- https://www.concretepage.com/spring-4/spring-4-mvc-thymeleaf-annotation-integration-tutorial-with-internationalization-example-using-springtemplateengine-and-thymeleafviewresolver[Spring Thymeleaf]
+- http://zetcode.com/articles/springbootthymeleafconf/[Spring Boot Thymeleaf Configuration]
+- http://www.baeldung.com/thymeleaf-in-spring-mvc[Thymeleaf in Spring MVC]
+- https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc[Error Handling]
